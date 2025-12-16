@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link, useLocation, Navigate } from 'react-router-dom'
 import Dashboard from './components/Dashboard'
 import Transactions from './components/Transactions'
 import AddTransaction from './components/AddTransaction'
@@ -130,6 +130,7 @@ function App() {
                 path="/analytics" 
                 element={<Analytics transactions={transactions} />} 
               />
+              <Route path="*" element={<Navigate to="/" replace />} />
             </Routes>
           </main>
         </div>
