@@ -5,7 +5,7 @@ import { convertCurrency } from '../utils/currencyAPI'
 function AddTransaction({ onAdd }) {
   const navigate = useNavigate()
   
-  const [formData, setFormData] = useState({
+  const[formData, setFormData] = useState({
     type: 'expense',
     amount: '',
     currency: 'RUB',
