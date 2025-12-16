@@ -101,7 +101,6 @@ function AddTransaction({ onAdd }) {
       <h2>Добавить транзакцию</h2>
 
       <form onSubmit={handleSubmit} className="transaction-form">
-        {/* Тип транзакции */}
         <div className="form-group">
           <label>Тип транзакции</label>
           <div className="type-toggle">
@@ -121,8 +120,6 @@ function AddTransaction({ onAdd }) {
             </button>
           </div>
         </div>
-
-        {/* Сумма */}
         <div className="form-group">
           <label>Сумма *</label>
           <div className="amount-input-group">
@@ -153,8 +150,6 @@ function AddTransaction({ onAdd }) {
             </div>
           )}
         </div>
-
-        {/* Категория */}
         <div className="form-group">
           <label>Категория *</label>
           <select
@@ -168,8 +163,6 @@ function AddTransaction({ onAdd }) {
             ))}
           </select>
         </div>
-
-        {/* Дата */}
         <div className="form-group">
           <label>Дата *</label>
           <input
@@ -180,8 +173,6 @@ function AddTransaction({ onAdd }) {
             required
           />
         </div>
-
-        {/* Описание */}
         <div className="form-group">
           <label>Описание</label>
           <textarea
@@ -192,8 +183,6 @@ function AddTransaction({ onAdd }) {
             rows="3"
           />
         </div>
-
-        {/* Кнопка отправки */}
         <div className="form-actions">
           <button type="submit" className="submit-btn">
             Сохранить транзакцию

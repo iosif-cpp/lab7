@@ -81,7 +81,7 @@ export const convertCurrency = async (amount, fromCurrency, toCurrency) => {
   const rate = rates[toCurrency]
   
   if (!rate) {
-    return amount // Если курс не найден, возвращаем исходную сумму
+    return amount
   }
 
   return amount * rate

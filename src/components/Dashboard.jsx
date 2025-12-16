@@ -46,7 +46,7 @@ function Dashboard({ transactions }) {
           if (animationIntervalRef.current) {
             clearInterval(animationIntervalRef.current)
           }
-          const steps = 15 // ~15 секунд плавного изменения
+          const steps = 15
           let step = 0
           const fromRates = prev
           const toRates = rates || {}
@@ -81,7 +81,6 @@ function Dashboard({ transactions }) {
       } catch (err) {
         console.error('Ошибка загрузки курсов:', err)
         setError('Не удалось загрузить курсы валют')
-        // Устанавливаем пустой объект, чтобы не показывать ошибку бесконечно
         setDisplayRates({})
       } finally {
         if (withLoading) {

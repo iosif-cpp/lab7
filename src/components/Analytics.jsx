@@ -32,7 +32,7 @@ function Analytics({ transactions }) {
         startDate.setFullYear(now.getFullYear() - 1)
         break
       default:
-        startDate = new Date(0) // Все время
+        startDate = new Date(0)
     }
 
     return transactions.filter(t => new Date(t.date) >= startDate)
@@ -65,8 +65,6 @@ function Analytics({ transactions }) {
     .sort((a, b) => b[1] - a[1])
 
   const maxCategoryExpense = categoryData.length > 0 ? categoryData[0][1] : 1
-
-  // Доходы по категориям
   const categoryIncome = {}
   periodData
     .filter(t => t.type === 'income')

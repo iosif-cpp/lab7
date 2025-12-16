@@ -55,8 +55,6 @@ function Transactions({ transactions, onDelete }) {
   return (
     <div className="transactions-page">
       <h2>Транзакции</h2>
-
-      {/* Фильтры */}
       <div className="filters">
         <div className="filter-group">
           <label>Тип:</label>
@@ -87,8 +85,6 @@ function Transactions({ transactions, onDelete }) {
           />
         </div>
       </div>
-
-      {/* Сводка */}
       <div className="summary-cards">
         <div className="summary-card income">
           <div className="summary-label">Итого доходов</div>
@@ -105,8 +101,6 @@ function Transactions({ transactions, onDelete }) {
           </div>
         </div>
       </div>
-
-      {/* Список транзакций */}
       <div className="transactions-list-full">
         {sortedTransactions.length === 0 ? (
           <div className="empty-state">
